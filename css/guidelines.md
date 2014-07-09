@@ -87,3 +87,35 @@ You must not use any `#id` as a selector.
 
 [1]: http://bem.info/ "BEM – Technology for creating web applications"
 [2]: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ "MindBEMding – getting your head ’round BEM syntax"
+
+## Preprocessor
+We assume here that Sass is used as prepocessor. As long they are applicable, all rules that apply to css also apply to the code for css preprocessors.
+
+### Declaration order
+- First list `@extend` declaration
+- then list regular styles
+- afterwards list `@include` statements.
+
+This visually separates the @extends and @includes as well as groups the @includes for easier reading. You might also want to make the call on separating user-authored @includes and vendor-provided @includes.
+
+### No nesting
+Using the BEM naming convention, nesting of selectors should be dispensable.
+
+### Additional preprocessor specific rules
+- Do not write vendor-prefixes directly into the code, use `@mixin`.
+- Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
+    + list vendor/global dependancies first, then author dependancies, then patterns, then parts
+    + as these files act like a table of content, comment them appropriate
+    + do not put styles in there
+- Partials are named with a leading underscore, like `_partial.sass`
+- Variablize all common numbers, and numbers with meaning
+- Variablize all colors
+- Name your media-queries
+
+
+
+
+
+
+
+
