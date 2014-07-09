@@ -20,7 +20,7 @@ All classes and ids in the html should be written lowercased. Therefor all selec
 We use tabs for indentation.
 
 ## Whitespace
-Remove trailing whitespace (i.e. tell your text editor to do so automatically). 
+Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for *indentation*.
 
 ## Naming convention
 The overall used naming convention used on ZON webpages should be following the [BEM][1] naming scheme. BEM in this case stands for `block, element, modifier`, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, [read this article][2] now.
