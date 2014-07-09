@@ -38,6 +38,22 @@ Remove trailing whitespace (i.e. tell your text editor to do so automatically). 
 - Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 - Separate each ruleset by a blank line.
 
+## Declaration order
+Declarations should be alphabetically ordered.
+
+## Exceptions
+Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.
+```css
+.selector {
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+}
+```
+
 ## Naming convention
 The overall used naming convention used on ZON webpages should be following the [BEM][1] naming scheme. BEM in this case stands for `block, element, modifier`, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, [read this article][2] now.
 
