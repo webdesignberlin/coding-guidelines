@@ -34,7 +34,6 @@ Remove trailing whitespace (i.e. tell your text editor to do so automatically). 
 - *Where allowed*, avoid specifying units for zero-values, e.g., `margin: 0`.
 - Include a space after each comma in comma-separated property or function values.
 - Include a semi-colon at the end of the last declaration in a declaration block.
-- Include a semi-colon at the end of the last declaration in a declaration block.
 - Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 - Separate each ruleset by a blank line.
 
