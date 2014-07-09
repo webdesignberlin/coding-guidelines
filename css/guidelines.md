@@ -22,6 +22,22 @@ We use tabs for indentation.
 ## Whitespace
 Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for *indentation*.
 
+## Format
+- Use one discrete selector per line in multi-selector rulesets.
+- Include a single space before the opening brace of a ruleset.
+- Include one declaration per line in a declaration block.
+- Use one level of indentation for each declaration.
+- Include a single space after the colon of a declaration.
+- Use lowercase and shorthand hex values, e.g., `#aaa`.
+- Use single or double quotes consistently. Preference is for double quotes, e.g., `content: ""`.
+- Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
+- *Where allowed*, avoid specifying units for zero-values, e.g., `margin: 0`.
+- Include a space after each comma in comma-separated property or function values.
+- Include a semi-colon at the end of the last declaration in a declaration block.
+- Include a semi-colon at the end of the last declaration in a declaration block.
+- Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+- Separate each ruleset by a blank line.
+
 ## Naming convention
 The overall used naming convention used on ZON webpages should be following the [BEM][1] naming scheme. BEM in this case stands for `block, element, modifier`, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, [read this article][2] now.
 
