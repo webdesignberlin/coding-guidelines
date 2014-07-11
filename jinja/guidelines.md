@@ -18,7 +18,7 @@ and variables with 1 space before and after their braces.
 {% endfor %}
 ```
 
-Never pad [filter pipes](http://jinja.pocoo.org/docs/templates/#filters) with spaces.
+Never pad [filter](http://jinja.pocoo.org/docs/templates/#filters) pipes with spaces.
 
 ```HTML+Django
 {{ container|join(', ') }}
@@ -63,4 +63,4 @@ Avoid substancial computation within control structures and try to move such
 code to view properties.
 
 Still, code inside jinja control structures is *mostly* Python and should
-conform to PEP8.
+conform to [PEP8](https://www.python.org/dev/peps/pep-0008).
