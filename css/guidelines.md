@@ -23,7 +23,7 @@ We use tabs for indentation.
 Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for *indentation*.
 
 ## Format
-- Use one discrete selector per line in multi-selector rulesets.
+- Use one selector per line in multi-selector rulesets.
 - Include a single space before the opening brace of a ruleset.
 - Include one declaration per line in a declaration block.
 - Use one level of indentation for each declaration.
