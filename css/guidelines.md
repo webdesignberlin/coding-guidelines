@@ -7,7 +7,7 @@
 }
 ```
 
-- The above mentioned code example covers one **css rule**.
+- The above mentioned code example covers one **css rule** or **ruleset**.
 - `.block` in this case is the **selector**.
 - `margin: 0;` is a **declaration**,
 - where `margin` is the property
