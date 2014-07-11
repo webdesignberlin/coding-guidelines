@@ -6,7 +6,7 @@ Use 4 spaces to indent HTML tags and template blocks.
 
 ## Whitespaces
 
-Use [whitespace control]http://jinja.pocoo.org/docs/templates/#whitespace-control)
+Use [whitespace control](http://jinja.pocoo.org/docs/templates/#whitespace-control)
 to strip whitespaces around or within control structures where needed.
 
 Always pad [control statements](http://jinja.pocoo.org/docs/templates/#list-of-control-structures)
