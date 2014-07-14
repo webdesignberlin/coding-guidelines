@@ -97,8 +97,9 @@ We assume here that Sass is used as prepocessor. As long they are applicable, al
 
 This visually separates the @extends and @includes as well as groups the @includes for easier reading. You might also want to make the call on separating user-authored @includes and vendor-provided @includes.
 
-### No nesting
-Using the BEM naming convention, nesting of selectors should be dispensable.
+### Maximum Nesting
+To keep up code readability and to avoid *specificity war*, do not nest Sass/SCSS code more than three levels deep.
+
 
 ### Additional preprocessor specific rules
 - Do not write vendor-prefixes directly into the code, use `@mixin`.
