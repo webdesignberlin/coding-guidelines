@@ -93,7 +93,8 @@ We assume here that Sass is used as prepocessor. As long they are applicable, al
 ### Declaration order
 - First list `@extend` declaration
 - then list regular styles
-- afterwards list `@include` statements.
+- afterwards list `@include` statements
+- at least add nested elements.
 
 This visually separates the @extends and @includes as well as groups the @includes for easier reading. You might also want to make the call on separating user-authored @includes and vendor-provided @includes.
 
