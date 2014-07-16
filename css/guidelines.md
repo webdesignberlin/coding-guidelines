@@ -115,7 +115,7 @@ To keep up code readability and to avoid *specificity war*, do not nest Sass/SCS
 - For naming, use the [general-to-specific](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364) approach when appropriate
 - Name your media-queries
 
-```sass
+```scss
 /**
  * Examples
  */
