@@ -110,9 +110,32 @@ To keep up code readability and to avoid *specificity war*, do not nest Sass/SCS
     + do not put styles in there
 - Partials are named with a leading underscore, like `_partial.sass`
 - Variablize all common numbers, and numbers with meaning
-- Variablize all colors
+- Variablize all colors, avoid using literal colors, encourage semantic color mappings 
+- Use hyphenated-variable-names (no camelCase or snake_case)
+- For naming, use the [general-to-specific](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364) approach when appropriate
 - Name your media-queries
 
+```sass
+/**
+ * Examples
+ */
+
+// literal colors
+$black: black;
+$grey: #808080;
+$red: #e02020;
+
+// semantic color mappings
+$primary-color: $black;
+$accent-color: $grey;
+$alert-color: $red;
+$link-color: $red;
+
+// usage
+$comments-color-text: $primary-color;
+$comments-color-link: $link-color;
+$comments-bg: $accent-color;
+```
 
 
 
