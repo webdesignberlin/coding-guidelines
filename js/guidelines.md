@@ -99,8 +99,8 @@ Global Variables: typeof variable ==="undefined"
 Local Variables: variable === undefined
 Properties: object.prop === undefined
 
-## Comments
-Use [JsDoc Style][2] to write comments.
+## Documentation
+Use [JsDoc Style][2] to describe functions.
 
 ```js
 /**
