@@ -1,142 +1,119 @@
 # ZEIT ONLINE JS Coding Guidelines
 
-## Definition
-```css
-.block {
-    margin: 0;
-}
-```
-
-- The above mentioned code example covers one **css rule** or **ruleset**.
-- `.block` in this case is the **selector**.
-- `margin: 0;` is a **declaration**,
-- where `margin` is the property
-- and `0` is the value.
-
 ## Notation
-All classes and ids in the html should be written lowercased. Therefor all selectors should be written lowercased. Also all declarations have to be written in lowercase.
+All functions and variables should be named in CamelCase (eg. "doCounting").   
+A function name should include an action and a noun (eg. "countNumber"), if the return value is in boolean the action should be "has" (eg. "hasNumber").
 
 ## Indentation
-We use tabs for indentation.
+We use soft tabs (4 spaces) for indentation.
 
 ## Whitespace
-Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for *indentation*.
+General use:
+- no trailing whitespace
+- no whitespace in empty lines
 
-## Format
-- Use one selector per line in multi-selector rulesets.
-- Include a single space before the opening brace of a ruleset.
-- Include one declaration per line in a declaration block.
-- Use one level of indentation for each declaration.
-- Include a single space after the colon of a declaration.
-- Use lowercase and shorthand hex values, e.g., `#aaa`.
-- Use single or double quotes consistently. Preference is for double quotes, e.g., `content: ""`.
-- Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-- *Where allowed*, avoid specifying units for zero-values, e.g., `margin: 0`.
-- Include a space after each comma in comma-separated property or function values.
-- Include a semi-colon at the end of the last declaration in a declaration block.
-- Place the closing brace of a ruleset in the same column as the first character of the ruleset.
-- Separate each ruleset by a blank line.
+Use maximal whitespacing ([jQuery Style][1]), this means:
+- use one whitespace behind: comma ( , ), colon ( : ), opening round brackets ( ( ) and closing brackets ( ) )
+- use one whitespace before and behind equals sign ( = ) and mathematical operators ( +, *, -, / ) and comparisons ( ==, ===, !=, !==, &&, ||, >, < )
 
-## Declaration order
-Declarations should be alphabetically ordered.
-
-## Exceptions
-Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.
-```css
-.selector {
-    background-image:
-        linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
-    box-shadow:
-        1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
+```js
+if ( bla == foo ) {
+  foo( "bar", "baz", { zoo: 1 } );
 }
 ```
 
-## Naming convention
-The overall used naming convention used on ZON webpages should be following the [BEM][1] naming scheme. BEM in this case stands for `block, element, modifier`, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, [read this article][2] now.
+## Whitespace Exceptions
+There are same exceptions to the whitespacing policy:
 
-### Naming Pattern
-The naming convention follows this pattern:
-```css
-.block {}
-.block__element {}
-.block--modifier {}
+```js
+// Function with a callback, object, or array as the sole argument:
+// No space on either side of the argument
+foo({
+    a: "alpha",
+    b: "beta"
+});
+ 
+// Function with a callback, object, or array as the first argument:
+// No space before the first argument
+foo(function() {
+    // Do stuff
+}, options );
+ 
+// Function with a callback, object, or array as the last argument:
+// No space after after the last argument
+foo( data, function() {
+    // Do stuff
+});
+
+//usage of jQuery object
+$( '<div class="myclass"></div>' );
 ```
 
-- `.block` represents the higher level of an abstraction or component.
-- `.block__element` represents a descendent of .block that helps form .block as a whole.
-- `.block--modifier` represents a different state or version of .block.
+## Format
+- use curly brackets to form blocks of code
 
-The double underscores and hyphens are used cause block, element or modifier themselves can contain single hyphens or underscores.
+```js
+// wrong!
+if ( true ) foo( "help!" );
 
-### HTML Example
-A typical HTML construct following this convention looks like this:
-```html
-<form class="site-search  site-search--full">
-    <input type="text" class="site-search__field">
-    <input type="submit" value ="Search" class="site-search__button">
-</form>
+// correct!
+if ( true ) {
+    foo( "911" );
+} 
 ```
 
-While `.block` and `.block__element` can be assign to elements seperately, `.block--modifier` is always used together with the element it modifies. In this case `site-search  site-search--full`. The modifier css rule may only contain *additional* declarations.
+- whenever possible, define all variables of a funtion at one place (always use var)
 
-### No IDs
-You must not use any `#id` as a selector.
+```js
+var title = "My title",
+    subtitle = "My subtitle",
+    story = "My story";
+```
 
-[1]: http://bem.info/ "BEM – Technology for creating web applications"
-[2]: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/ "MindBEMding – getting your head ’round BEM syntax"
+- global variabels should always be referenzed by using the window object (eg. window.myGlobalVar) 
+- strings should be defined with double quotes
 
-## Preprocessor
-We assume here that Sass is used as prepocessor. As long they are applicable, all rules that apply to css also apply to the code for css preprocessors.
+```js
+var title = "My title";
+```
+- usage of strings within the jquery object should be encapsulated with single quotes
 
-### Declaration order
-- First list `@extend` declaration
-- then list regular styles
-- afterwards list `@include` statements
-- at least add nested elements.
+```js
+$( '<div class="myclass"></div>' );
+```
 
-This visually separates the @extends and @includes as well as groups the @includes for easier reading. You might also want to make the call on separating user-authored @includes and vendor-provided @includes.
+## Comparisons
+For comparisons use:
 
-### Maximum Nesting
-To keep up code readability and to avoid *specificity war*, do not nest Sass/SCSS code more than three levels deep.
+String: typeof object === "string"
+Number: typeof object === "number"
+Boolean: typeof object === "boolean"
+Object: typeof object === "object"
+Plain Object: jQuery.isPlainObject(object)
+Function: jQuery.isFunction(object)
+Array: jQuery.isArray(object)
+Element: object.nodeType
+null: object === null
+null or undefined: object == null
+Global Variables: typeof variable ==="undefined"
+Local Variables: variable === undefined
+Properties: object.prop === undefined
 
+## Comments
+Use [JsDoc Style][2] to write comments.
 
-### Additional preprocessor specific rules
-- Do not write vendor-prefixes directly into the code, use `@mixin`.
-- Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
-    + list vendor/global dependancies first, then author dependancies, then patterns, then parts
-    + as these files act like a table of content, comment them appropriate
-    + do not put styles in there
-- Partials are named with a leading underscore, like `_partial.sass`
-- Variablize all common numbers, and numbers with meaning
-- Variablize all colors, avoid using literal colors, encourage semantic color mappings 
-- Use hyphenated-variable-names (no camelCase or snake_case)
-- For naming, use the [general-to-specific](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364) approach when appropriate
-- Name your media-queries
-
-```scss
+```js
 /**
- * Examples
+ * writes a book.
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
  */
-
-// literal colors
-$black: black;
-$grey: #808080;
-$red: #e02020;
-
-// semantic color mappings
-$primary-color: $black;
-$accent-color: $grey;
-$alert-color: $red;
-$link-color: $red;
-
-// usage
-$comments-color-text: $primary-color;
-$comments-color-link: $link-color;
-$comments-bg: $accent-color;
+function writeBook( title, author ) {
+}
 ```
 
+[1]: http://contribute.jquery.org/style-guide/js/#spacing "jQuery Style Guide"
+[2]: http://usejsdoc.org/ "JsDoc"
 
 
 
