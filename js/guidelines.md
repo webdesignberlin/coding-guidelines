@@ -13,7 +13,7 @@ General use:
 - no whitespace in empty lines
 
 Use maximal whitespacing ([jQuery Style][1]), this means:
-- use one whitespace behind: comma ( , ), colon ( : ), opening round brackets ( ( ) and closing brackets ( ) )
+- use one whitespace behind: comma ( , ), colon ( : ), opening round brackets ( ( ) and before closing brackets ( ) )
 - use one whitespace before and behind equals sign ( = ) and mathematical operators ( +, *, -, / ) and comparisons ( ==, ===, !=, !==, &&, ||, >, < )
 
 ```js
@@ -112,17 +112,17 @@ function writeBook( title, author ) {
 JS Hint should be used with the following settings:
 
 ```
-'-W015': true, //don't show indentation warnings
-browser: true, // set browser environment
-curly: true, // require curly braces around control structure
-eqeqeq: true, // prohibits the use of == and != in favor of === and !==
-forin: true, // requires all for in loops to filter object's items
-indent: 4, // tabsize should be 4 spaces
-jquery: true, // set query globals
-latedef: true, // never use vars before they are defined
-loopfunc: true, // no warnings about functions in loops
-trailing: true, // makes it an error to leave a trailing whitespace
-undef: true, // just use defined var, If your variable is defined in another file, you can use /*global ... */ directive to tell JSHint about it 
+'-W015': true, //don't show indentation warnings  
+browser: true, // set browser environment  
+curly: true, // require curly braces around control structure  
+eqeqeq: true, // prohibits the use of == and != in favor of === and !==  
+forin: true, // requires all for in loops to filter object's items  
+indent: 4, // tabsize should be 4 spaces  
+jquery: true, // set query globals  
+latedef: true, // never use vars before they are defined  
+loopfunc: true, // no warnings about functions in loops  
+trailing: true, // makes it an error to leave a trailing whitespace  
+undef: true, // just use defined var, If your variable is defined in another file, you can use /*global ... */ directive to tell JSHint about it   
 ```
 
 [1]: http://contribute.jquery.org/style-guide/js/#spacing "jQuery Style Guide"
