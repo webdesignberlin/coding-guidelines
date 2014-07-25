@@ -21,7 +21,6 @@ if ( bla == foo ) {
   foo( "bar", "baz", { zoo: 1 } );
 }
 ```
-
 ## Whitespace Exceptions
 There are same exceptions to the whitespacing policy:
 
@@ -48,7 +47,6 @@ foo( data, function() {
 //usage of jQuery object
 $( '<div class="myclass"></div>' );
 ```
-
 ## Format
 - use curly brackets to form blocks of code
 
@@ -81,7 +79,6 @@ var title = "My title";
 ```js
 $( '<div class="myclass"></div>' );
 ```
-
 ## Comparisons
 For comparisons use:
 
@@ -111,7 +108,6 @@ Use [JsDoc Style][2] to describe functions.
 function writeBook( title, author ) {
 }
 ```
-
 ##Hinting
 JS Hint should be used with the following settings:
 
