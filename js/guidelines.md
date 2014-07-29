@@ -13,8 +13,8 @@ General use:
 - no whitespace in empty lines
 
 Use maximal whitespacing ([jQuery Style][1]), this means:
-- use one whitespace behind: comma ( , ), colon ( : ), opening round brackets ( ( ) and before closing brackets ( ) )
-- use one whitespace before and behind equals sign ( = ) and mathematical operators ( +, *, -, / ) and comparisons ( ==, ===, !=, !==, &&, ||, >, < )
+- use one whitespace behind: comma ```( , )```, colon ```( : )```, opening round brackets ```( ( )``` and before closing brackets ```( ) )```
+- use one whitespace before and behind equals sign ```( = )``` and mathematical operators ```( +, *, -, / )``` and comparisons ```( ==, ===, !=, !==, &&, ||, >, < )```
 
 ```js
 if ( bla == foo ) {
