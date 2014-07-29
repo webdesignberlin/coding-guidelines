@@ -60,7 +60,7 @@ if ( true ) {
 } 
 ```
 
-- whenever possible, define all variables of a funtion at one place (always use var)
+- whenever possible, define all variables of a function at one place (always use var)
 
 ```js
 var title = "My title",
