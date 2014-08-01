@@ -1,12 +1,11 @@
 ---
-
 layout: default
 title: CSS Guidelines
 permalink: /css
-
+excerpt: Rules to style by - for cascading and syntactically awesome stylesheets.
 ---
 
-# ZEIT ONLINE CSS Coding Guidelines
+# CSS Coding Guidelines
 
 ## Definition
 ```css
