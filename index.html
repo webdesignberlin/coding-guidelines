@@ -4,9 +4,12 @@ title: Coding-guidelines
 excerpt: Collection of files, settings and documents concerning code writing at ZEIT ONLINE.
 ---
 
-# Guideline overview
+<h1>Guideline overview</h1>
 
+<ul>
 {% for post in site.posts %}
-* ## [{{ post.title }}]({{ post.url }})
-  {{ post.excerpt }}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
 {% endfor %}
+</ul>
