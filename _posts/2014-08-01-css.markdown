@@ -1,11 +1,4 @@
----
-layout: default
-title: CSS Guidelines
-permalink: /css
-excerpt: Rules to style by - for cascading and syntactically awesome stylesheets.
----
-
-# CSS Coding Guidelines
+# ZEIT ONLINE CSS Coding Guidelines
 
 ## Definition
 ```css
@@ -143,3 +136,9 @@ $comments-color-text: $primary-color;
 $comments-color-link: $link-color;
 $comments-bg: $accent-color;
 ```
+
+
+
+
+
+
