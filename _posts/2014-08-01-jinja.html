@@ -1,0 +1,71 @@
+---
+title: 
+url: /
+---
+
+<h1>ZEIT ONLINE Jinja Coding Guidelines</h1>
+
+<h2>Indentation</h2>
+
+<p>Use 4 spaces to indent HTML tags and template blocks.</p>
+
+<h2>Whitespaces</h2>
+
+<p>Use <a href="http://jinja.pocoo.org/docs/templates/#whitespace-control">whitespace control</a>
+to strip whitespaces around or within control structures where needed.</p>
+
+<p>Always pad <a href="http://jinja.pocoo.org/docs/templates/#list-of-control-structures">control statements</a>
+and variables with 1 space before and after their braces.</p>
+
+<p><code>HTML+Django
+{% for item in container %}
+    &lt;span&gt;{{ item.text }}&lt;/span&gt;
+{% endfor %}
+</code></p>
+
+<p>Never pad <a href="http://jinja.pocoo.org/docs/templates/#filters">filter</a> pipes with spaces.</p>
+
+<p><code>HTML+Django
+{{ container|join(', ') }}
+</code></p>
+
+<h2>Blank lines</h2>
+
+<p>There is <em>no</em> blank line at the top and exactly <em>one</em> at the end of a file.</p>
+
+<p>Use one blank line to separate semantic HTML sections and jinja blocks (i.e. macros).</p>
+
+<p>Import and extend statements should be grouped at the top of a document, with
+one trailing blank line.</p>
+
+<h2>Line length</h2>
+
+<p>A strict maximum line length is not enforced, but try to avoid unnecessarily
+long lines with multiple tags.</p>
+
+<h2>Assignments</h2>
+
+<p>Avoid assignments for cached properties and static attributes, like
+<code>{% set val = view.val %}</code>. <a href="http://jinja.pocoo.org/docs/templates/#assignments">Assigning</a>
+return values of computationally heavy methods, however, is encouraged.</p>
+
+<p><code>HTML+Django
+{% set web = crawl_web() %}
+</code></p>
+
+<h2>Comments</h2>
+
+<p>Use <a href="http://jinja.pocoo.org/docs/templates/#comments">jinja style comments</a>
+instead of HTML comments to prevent them from rendering.</p>
+
+<p><code>HTML+Django
+{# TODO: This section needs to be reworked. #}
+</code></p>
+
+<h2>Embedded code</h2>
+
+<p>Avoid substancial computation within control structures and try to move such
+code to view properties.</p>
+
+<p>Still, code inside jinja control structures is <em>mostly</em> Python and should
+conform to <a href="https://www.python.org/dev/peps/pep-0008">PEP8</a>.</p>

@@ -1,0 +1,168 @@
+---
+title: 
+url: /
+---
+
+<h1>ZEIT ONLINE CSS Coding Guidelines</h1>
+
+<h2>Definition</h2>
+
+<p><code>css
+.block {
+    margin: 0;
+}
+</code></p>
+
+<ul>
+<li>The above mentioned code example covers one <strong>css rule</strong> or <strong>ruleset</strong>.</li>
+<li><code>.block</code> in this case is the <strong>selector</strong>.</li>
+<li><code>margin: 0;</code> is a <strong>declaration</strong>,</li>
+<li>where <code>margin</code> is the property</li>
+<li>and <code>0</code> is the value.</li>
+</ul>
+
+<h2>Notation</h2>
+
+<p>All classes and ids in the html should be written lowercased. Therefor all selectors should be written lowercased. Also all declarations have to be written in lowercase.</p>
+
+<h2>Indentation</h2>
+
+<p>We use tabs for indentation.</p>
+
+<h2>Whitespace</h2>
+
+<p>Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for <em>indentation</em>.</p>
+
+<h2>Format</h2>
+
+<ul>
+<li>Use one selector per line in multi-selector rulesets.</li>
+<li>Include a single space before the opening brace of a ruleset.</li>
+<li>Include one declaration per line in a declaration block.</li>
+<li>Use one level of indentation for each declaration.</li>
+<li>Include a single space after the colon of a declaration.</li>
+<li>Use lowercase and shorthand hex values, e.g., <code>#aaa</code>.</li>
+<li>Use single or double quotes consistently. Preference is for double quotes, e.g., <code>content: ""</code>.</li>
+<li>Quote attribute values in selectors, e.g., <code>input[type="checkbox"]</code>.</li>
+<li><em>Where allowed</em>, avoid specifying units for zero-values, e.g., <code>margin: 0</code>.</li>
+<li>Include a space after each comma in comma-separated property or function values.</li>
+<li>Include a semi-colon at the end of the last declaration in a declaration block.</li>
+<li>Place the closing brace of a ruleset in the same column as the first character of the ruleset.</li>
+<li>Separate each ruleset by a blank line.</li>
+</ul>
+
+<h2>Declaration order</h2>
+
+<p>Declarations should be alphabetically ordered.</p>
+
+<h2>Exceptions</h2>
+
+<p>Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.
+<code>css
+.selector {
+    background-image:
+        linear-gradient(#fff, #ccc),
+        linear-gradient(#f3c, #4ec);
+    box-shadow:
+        1px 1px 1px #000,
+        2px 2px 1px 1px #ccc inset;
+}
+</code></p>
+
+<h2>Naming convention</h2>
+
+<p>The overall used naming convention used on ZON webpages should be following the <a href="http://bem.info/" title="BEM – Technology for creating web applications">BEM</a> naming scheme. BEM in this case stands for <code>block, element, modifier</code>, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" title="MindBEMding – getting your head ’round BEM syntax">read this article</a> now.</p>
+
+<h3>Naming Pattern</h3>
+
+<p>The naming convention follows this pattern:
+<code>css
+.block {}
+.block__element {}
+.block--modifier {}
+</code></p>
+
+<ul>
+<li><code>.block</code> represents the higher level of an abstraction or component.</li>
+<li><code>.block__element</code> represents a descendent of .block that helps form .block as a whole.</li>
+<li><code>.block--modifier</code> represents a different state or version of .block.</li>
+</ul>
+
+<p>The double underscores and hyphens are used cause block, element or modifier themselves can contain single hyphens or underscores.</p>
+
+<h3>HTML Example</h3>
+
+<p>A typical HTML construct following this convention looks like this:
+```html</p>
+
+<form class="site-search  site-search--full">
+    <input type="text" class="site-search__field">
+    <input type="submit" value ="Search" class="site-search__button">
+</form>
+
+<p>```</p>
+
+<p>While <code>.block</code> and <code>.block__element</code> can be assign to elements seperately, <code>.block--modifier</code> is always used together with the element it modifies. In this case <code>site-search  site-search--full</code>. The modifier css rule may only contain <em>additional</em> declarations.</p>
+
+<h3>No IDs</h3>
+
+<p>You must not use any <code>#id</code> as a selector.</p>
+
+<h2>Preprocessor</h2>
+
+<p>We assume here that Sass is used as prepocessor. As long they are applicable, all rules that apply to css also apply to the code for css preprocessors.</p>
+
+<h3>Declaration order</h3>
+
+<ul>
+<li>First list <code>@extend</code> declaration</li>
+<li>then list regular styles</li>
+<li>afterwards list <code>@include</code> statements</li>
+<li>at least add nested elements.</li>
+</ul>
+
+<p>This visually separates the @extends and @includes as well as groups the @includes for easier reading. You might also want to make the call on separating user-authored @includes and vendor-provided @includes.</p>
+
+<h3>Maximum Nesting</h3>
+
+<p>To keep up code readability and to avoid <em>specificity war</em>, do not nest Sass/SCSS code more than three levels deep.</p>
+
+<h3>Additional preprocessor specific rules</h3>
+
+<ul>
+<li>Do not write vendor-prefixes directly into the code, use <code>@mixin</code>.</li>
+<li>Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
+<ul>
+<li>list vendor/global dependancies first, then author dependancies, then patterns, then parts</li>
+<li>as these files act like a table of content, comment them appropriate</li>
+<li>do not put styles in there</li>
+</ul></li>
+<li>Partials are named with a leading underscore, like <code>_partial.sass</code></li>
+<li>Variablize all common numbers, and numbers with meaning</li>
+<li>Variablize all colors, avoid using literal colors, encourage semantic color mappings </li>
+<li>Use hyphenated-variable-names (no camelCase or snake_case)</li>
+<li>For naming, use the <a href="http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364">general-to-specific</a> approach when appropriate</li>
+<li>Name your media-queries</li>
+</ul>
+
+<p>```scss
+/**
+ * Examples
+ */</p>
+
+<p>// literal colors
+$black: black;
+$grey: #808080;
+$red: #e02020;</p>
+
+<p>// semantic color mappings
+$primary-color: $black;
+$accent-color: $grey;
+$alert-color: $red;
+$link-color: $red;</p>
+
+<p>// usage
+$comments-color-text: $primary-color;
+$comments-color-link: $link-color;
+$comments-bg: $accent-color;
+```</p>
