@@ -1,11 +1,3 @@
----
-
-layout: default
-title: CSS Guidelines
-permalink: /css
-
----
-
 # ZEIT ONLINE CSS Coding Guidelines
 
 ## Definition
@@ -144,3 +136,10 @@ $comments-color-text: $primary-color;
 $comments-color-link: $link-color;
 $comments-bg: $accent-color;
 ```
+
+
+
+
+
+
+
