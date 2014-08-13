@@ -39,7 +39,7 @@ foo(function() {
 }, options );
  
 // Function with a callback, object, or array as the last argument:
-// No space after after the last argument
+// No space after the last argument
 foo( data, function() {
     // Do stuff
 });
