@@ -1,0 +1,130 @@
+---
+title: js
+permalink: /js
+layout: default
+---
+{% raw %}
+
+<h1>ZEIT ONLINE JS Coding Guidelines</h1>
+
+<h2>Notation</h2>
+
+<p>All functions and variables should be named in CamelCase (eg. "doCounting"). <br />
+A function name should include an action and a noun (eg. "countNumber"), if the return value is in boolean the action should be "has" (eg. "hasNumber").</p>
+
+<h2>Indentation</h2>
+
+<p>We use soft tabs (1 tab = 4 spaces) for indentation.</p>
+
+<h2>Whitespace</h2>
+
+<p>General use:
+- no trailing whitespace
+- no whitespace in empty lines</p>
+
+<p>Use maximal whitespacing (<a href="http://contribute.jquery.org/style-guide/js/#spacing" title="jQuery Style Guide">jQuery Style</a>), this means:
+- use one whitespace behind: comma <code>( , )</code>, colon <code>( : )</code>, opening round brackets <code>( ( )</code> and before closing brackets <code>( ) )</code>
+- use one whitespace before and behind equals sign <code>( = )</code> and mathematical operators <code>( +, *, -, / )</code> and comparisons <code>( ==, ===, !=, !==, &amp;&amp;, ||, &gt;, &lt; )</code></p>
+
+<p><code>js
+if ( bla == foo ) {
+  foo( 'bar', 'baz', { zoo: 1 } );
+}
+</code></p>
+
+<h2>Whitespace Exceptions</h2>
+
+<p>There are some exceptions to the whitespacing policy:</p>
+
+<p>```js
+// Function with a callback, object, or array as the sole argument:
+// No space on either side of the argument
+foo({
+    a: 'alpha',
+    b: 'beta'
+});</p>
+
+<p>// Function with a callback, object, or array as the first argument:
+// No space before the first argument
+foo(function() {
+    // Do stuff
+}, options );</p>
+
+<p>// Function with a callback, object, or array as the last argument:
+// No space after the last argument
+foo( data, function() {
+    // Do stuff
+});</p>
+
+<p>// Usage of jQuery object
+$( '<div class="myclass"></div>' );
+```</p>
+
+<h2>Format</h2>
+
+<ul>
+<li>use curly brackets to form blocks of code</li>
+</ul>
+
+<p>```js
+// wrong!
+if ( true ) foo( 'help!' );</p>
+
+<p>// correct!
+if ( true ) {
+    foo( '911' );
+} 
+```</p>
+
+<ul>
+<li>whenever possible, define all variables of a function at one place (always use var)</li>
+</ul>
+
+<p><code>js
+var title = 'My title',
+    subtitle = 'My subtitle',
+    story = 'My story';
+</code></p>
+
+<ul>
+<li>global variabels should always be referenzed by using the window object (eg. window.myGlobalVar) </li>
+<li>whenever we can, we should use single ticks</li>
+</ul>
+
+<p><code>js
+var title = 'My title';
+$( '&lt;div class="myclass"&gt;&lt;/div&gt;' );
+</code></p>
+
+<h2>Comparisons</h2>
+
+<p>For comparisons use:</p>
+
+<p>String: typeof object === "string" <br />
+Number: typeof object === "number" <br />
+Boolean: typeof object === "boolean" <br />
+Object: typeof object === "object" <br />
+Plain Object: jQuery.isPlainObject(object) <br />
+Function: jQuery.isFunction(object) <br />
+Array: jQuery.isArray(object) <br />
+Element: object.nodeType <br />
+null: object === null <br />
+null or undefined: object == null <br />
+Global Variables: typeof variable ==="undefined" <br />
+Local Variables: variable === undefined <br />
+Properties: object.prop === undefined  </p>
+
+<h2>Documentation</h2>
+
+<p>Use <a href="http://usejsdoc.org/" title="JsDoc">JsDoc Style</a> to describe functions.</p>
+
+<p><code>js
+/**
+ * writes a book.
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function writeBook( title, author ) {
+}
+</code></p>
+{% endraw %}
