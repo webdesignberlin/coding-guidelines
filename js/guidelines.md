@@ -22,7 +22,7 @@ if ( bla == foo ) {
 }
 ```
 ## Whitespace Exceptions
-There are same exceptions to the whitespacing policy:
+There are some exceptions to the whitespacing policy:
 
 ```js
 // Function with a callback, object, or array as the sole argument:
@@ -44,7 +44,7 @@ foo( data, function() {
     // Do stuff
 });
 
-//usage of jQuery object
+// Usage of jQuery object
 $( '<div class="myclass"></div>' );
 ```
 ## Format
