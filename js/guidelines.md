@@ -18,7 +18,7 @@ Use maximal whitespacing ([jQuery Style][1]), this means:
 
 ```js
 if ( bla == foo ) {
-  foo( "bar", "baz", { zoo: 1 } );
+  foo( 'bar', 'baz', { zoo: 1 } );
 }
 ```
 ## Whitespace Exceptions
@@ -28,8 +28,8 @@ There are some exceptions to the whitespacing policy:
 // Function with a callback, object, or array as the sole argument:
 // No space on either side of the argument
 foo({
-    a: "alpha",
-    b: "beta"
+    a: 'alpha',
+    b: 'beta'
 });
  
 // Function with a callback, object, or array as the first argument:
@@ -52,33 +52,30 @@ $( '<div class="myclass"></div>' );
 
 ```js
 // wrong!
-if ( true ) foo( "help!" );
+if ( true ) foo( 'help!' );
 
 // correct!
 if ( true ) {
-    foo( "911" );
+    foo( '911' );
 } 
 ```
 
 - whenever possible, define all variables of a function at one place (always use var)
 
 ```js
-var title = "My title",
-    subtitle = "My subtitle",
-    story = "My story";
+var title = 'My title',
+    subtitle = 'My subtitle',
+    story = 'My story';
 ```
 
 - global variabels should always be referenzed by using the window object (eg. window.myGlobalVar) 
-- strings should be defined with double quotes
+- whenever we can we should use single ticks
 
 ```js
-var title = "My title";
-```
-- usage of strings within the jquery object should be encapsulated with single quotes
-
-```js
+var title = 'My title';
 $( '<div class="myclass"></div>' );
 ```
+
 ## Comparisons
 For comparisons use:
 
