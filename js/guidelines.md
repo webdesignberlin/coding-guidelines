@@ -69,7 +69,7 @@ var title = 'My title',
 ```
 
 - global variabels should always be referenzed by using the window object (eg. window.myGlobalVar) 
-- whenever we can we should use single ticks
+- whenever we can, we should use single ticks
 
 ```js
 var title = 'My title';
