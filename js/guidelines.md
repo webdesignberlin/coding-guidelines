@@ -5,7 +5,7 @@ All functions and variables should be named in CamelCase (eg. "doCounting").
 A function name should include an action and a noun (eg. "countNumber"), if the return value is in boolean the action should be "has" (eg. "hasNumber").
 
 ## Indentation
-We use soft tabs (4 spaces) for indentation.
+We use soft tabs (1 tab = 4 spaces) for indentation.
 
 ## Whitespace
 General use:
