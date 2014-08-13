@@ -79,19 +79,19 @@ $( '<div class="myclass"></div>' );
 ## Comparisons
 For comparisons use:
 
-String: typeof object === "string"
-Number: typeof object === "number"
-Boolean: typeof object === "boolean"
-Object: typeof object === "object"
-Plain Object: jQuery.isPlainObject(object)
-Function: jQuery.isFunction(object)
-Array: jQuery.isArray(object)
-Element: object.nodeType
-null: object === null
-null or undefined: object == null
-Global Variables: typeof variable ==="undefined"
-Local Variables: variable === undefined
-Properties: object.prop === undefined
+String: typeof object === "string"  
+Number: typeof object === "number"  
+Boolean: typeof object === "boolean"  
+Object: typeof object === "object"  
+Plain Object: jQuery.isPlainObject(object)  
+Function: jQuery.isFunction(object)  
+Array: jQuery.isArray(object)  
+Element: object.nodeType  
+null: object === null  
+null or undefined: object == null  
+Global Variables: typeof variable ==="undefined"  
+Local Variables: variable === undefined  
+Properties: object.prop === undefined  
 
 ## Documentation
 Use [JsDoc Style][2] to describe functions.
