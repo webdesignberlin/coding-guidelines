@@ -1,9 +1,9 @@
 # ZEIT ONLINE Python Coding Guidelines
 
-Please read and adhere to [PEP-8](http://legacy.python.org/dev/peps/pep-0008/).
+Please read and adhere to [PEP 8](http://legacy.python.org/dev/peps/pep-0008/).
 
 The following additional guidelines are structured according to the original
-PEP-8 document.
+PEP 8 document.
 
 ## Maximum Line Length
 
@@ -38,7 +38,7 @@ assert ('<html><body><div><h1>{{ title }}</h1>'
 
 ## Imports
 
-In addition to the suggested PEP-8 import order, use a fourth section to group
+In addition to the suggested PEP 8 import order, use a fourth section to group
 import statements.
 
 * standard library imports
