@@ -18,10 +18,10 @@ and variables with 1 space before and after their braces.
 {% endfor %}
 ```
 
-Never pad [filter](http://jinja.pocoo.org/docs/templates/#filters) pipes with spaces.
+Also add a 1 space padding to [filter](http://jinja.pocoo.org/docs/templates/#filters) pipes.
 
 ```HTML+Django
-{{ container|join(', ') }}
+{{ container | join(', ') }}
 ```
 
 ## Blank lines
